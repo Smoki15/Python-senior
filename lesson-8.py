@@ -2,7 +2,7 @@ result = []
 
 
 def divider(a, b):
-    except ValueError as error:
+    try:
     if a < b:
         raise ValueError
     except IndexError as error:
@@ -11,7 +11,7 @@ def divider(a, b):
     return a / b
 
 data = {10: 2, 2: 5, "123": 4, 18: 0, []: 15, 8: 4}
-try:
+except ValueError as error:
 for key in data:
     res = divider(key, data[key])
     result.append(res)
